@@ -28,15 +28,15 @@
     <div class="container-fluid">
       <!-- SECTION listings -->
       <section id="listings" class="row">
-        <!-- STUB car template -->
+        <!-- STUB car template, used for HOUSE -->
         <!-- <div class="col-4 p-3">
           <div class="bg-white elevation-2">
             <img class="img-fluid" src="https://thiscatdoesnotexist.com" alt="">
             <div class="p-2">
-              <h4 class="text-center">Make | Model | Year</h4>
+              <h4 class="text-center">Year | Price | Bed/Bath</h4>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus corrupti possimus neque quas,
                 dignissimos itaque at aspernatur.</p>
-              <p class="text-end text-success m-0">$<b>100</b></p>
+              <p class="text-end m-0">$<b>100</b></p>
             </div>
           </div>
         </div> -->
@@ -44,20 +44,20 @@
       </section>
       <!-- SECTION form -->
       <section id="form" class="row justify-content-center p-3">
-        <form class="col-10 bg-white p-3 elevation-2" onsubmit="app.carsController.createCar()">
-          <h3 class="text-primary">List Your Car</h3>
+        <form class="col-10 bg-white p-3 elevation-2" onsubmit="app.housesController.submitHouse()"> 
+          <h3 class="text-primary">List Your House</h3>
           <div class="row">
             <div class="col-4">
-              <label class="form-label" for="make">Make</label>
-              <input class="form-control" type="text" minlength="5" id="make" name="make">
-            </div>
-            <div class="col-4">
-              <label class="form-label" for="model">Model</label>
-              <input class="form-control" type="text" id="model" name="model">
-            </div>
-            <div class="col-4">
               <label class="form-label" for="year">Year</label>
-              <input class="form-control" type="number" id="year" name="year">
+              <input class="form-control" type="number" minlength="4" id="year" name="year">
+            </div>
+            <div class="col-4">
+              <label class="form-label" for="bed">Beds</label>
+              <input class="form-control" type="number" id="beds" name="beds">
+            </div>
+            <div class="col-4">
+              <label class="form-label" for="bath">Bath</label>
+              <input class="form-control" type="number" id="bath" name="bath">
             </div>
             <label class="form-label" for="price">Price</label>
             <input class="form-control" type="number" min="1" id="price" name="price">
@@ -69,6 +69,7 @@
           </div>
         </form>
       </section>
+      
     </div>
   </main>
   <footer class="bg-dark text-light">
